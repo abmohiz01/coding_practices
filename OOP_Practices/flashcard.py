@@ -38,8 +38,24 @@ class FlashCard1():
 
     def quiz(self):
 
-        for fruit in self.fruits.keys():
+        for fruit, color in fruits.items():
             print(fruit)
+            ask = input("Enter the name of fruit color")
+            print(ask)
+            if ask == color:
+                if True:
+                    print("True")
+                    continue
+
+            if ask == len(fruits):
+                print("all correct full marks")
+            else:
+                print("Wrong answer")
+                break
+
+
+
+
 
 fruits = {'apple': "red",
                        'banana': "yellow",
