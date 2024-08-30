@@ -1,11 +1,21 @@
 """Printing star in triangle """
 
 def triangle_pattern():
-    for i in range(1,5):
-        for j in range(i):
-            print(j+1,end = " ")
+    for x in range(1, 5):
+        for y in range(x):
+            print("*", end=" ")
 
-        print()  #Move the next line after each row
+        print()
+    for i in range(5):
+        for j in range(i, 5):
+            print("*", end=" ")
+
+        print()
+
+
+
+
+
 
 
 triangle_pattern()
