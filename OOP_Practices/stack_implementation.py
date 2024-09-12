@@ -53,7 +53,7 @@ class StackImplementaion_deques():
 
         print(self.mydeques)
 
-demo_list1= [i for i in range(1,20+1)]
+demo_list1= deque(i for i in range(1,20+1))
 demo_deq = StackImplementaion_deques(my_deques=demo_list1)
 demo_deq.pushing_deque()
 demo_deq.poping_deque()
