@@ -41,6 +41,8 @@ def remove_duplicates(word3):
            unique_word.add(word)
            my_list.append(word)
 
+    print(unique_word)
+    print(my_list)
     print("Unique characters in order:", "".join(my_list))
 
 def remove_char(word4):
@@ -58,3 +60,29 @@ def remove_char(word4):
 
 remove_duplicates("hello")
 remove_char("Programming")
+remove_char("hello")
+
+def Capitalize(sentence):
+
+    words = sentence.split()
+
+    capitalize_word = [ cap.capitalize() for cap in words]
+
+    print("Sentence is :", " ".join(capitalize_word))
+
+Capitalize("Hello world this is mohiz")
+remove_duplicates("Hello Hello world this is mohiz")
+
+'''Convert a string to list of words'''
+
+def list_of_words(word5: str):
+
+    listing = []
+
+    for w_list in word5:
+        listing.append(w_list)
+
+    print(listing)
+
+list_of_words("helloworld")
+
