@@ -14,22 +14,24 @@ class Apples:
     def program(self):
 
         while self.total_apples > 0:
+            # Generate random weight for each apple
+            current_apple_weight = random.uniform(0.2, 0.5)
 
-            apple_weight = random.uniform(0.2,0.5)
+            # Update class variables
+            Apples.apple_weight += round(current_apple_weight, 1)
+            Apples.apple_num += 1
 
-            for apple_num in range(self.total_apples):
-                apple_weight += apple_num
+            # Decrease the instance's apple count
+            self.total_apples -= 1
 
-
-            if apple_weight > 300:
-                print("Package limit Exceeded", apple_weight)
+            # Check if package weight exceeds 300
+            if Apples.apple_weight > 300:
+                print(f"Package limit exceeded: {round(Apples.apple_weight,1)} kg with {Apples.apple_num} apples")
                 break
-
             else:
-                print("Package Weight",apple_weight)
-                break
+                print(f"Current total weight: {round(Apples.apple_weight,1)} kg, Total apples: {Apples.apple_num}")
 
 
-myentry = Apples(24)
+myentry = Apples(1000)
 myentry.program()
 
